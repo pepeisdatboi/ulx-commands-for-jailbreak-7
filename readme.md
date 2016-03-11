@@ -3,9 +3,10 @@ Garry's Mod Addon that adds [ULX](https://github.com/TeamUlysses/ulx) commands f
 
 ## Requirements
 ULX commands for Jailbreak 7 requires the following addons:
-[ULib](https://github.com/TeamUlysses/ulib)
-[ULX](https://github.com/TeamUlysses/ulx)
-[Jailbreak 7](https://github.com/kurt-stolle/jailbreak)
+
+* [ULib](https://github.com/TeamUlysses/ulib)
+* [ULX](https://github.com/TeamUlysses/ulx)
+* [Jailbreak 7](https://github.com/kurt-stolle/jailbreak)
 
 ## Installation
 To install this addon, copy the repository's `ulx4jb7/` folder into your `garrysmod/addons/` folder.
