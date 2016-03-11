@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"				"ULX commands for Jailbreak 7"
+	"version"			"0.1"
+	"up_date"			"3/10/16"
+	"author_name"		"Ian Murray"
+	"author_url"		"http://ianmurray.github.io"
+	"info"				"ULX commands for Excl's Jailbreak 7"
+	"override"			"0"
+}
