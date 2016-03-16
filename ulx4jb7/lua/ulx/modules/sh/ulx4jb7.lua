@@ -41,4 +41,4 @@ end
 local revive = ulx.command("Jailbreak", "ulx revive", ulx.revive, "!revive")
 revive:defaultAccess( ULib.ACCESS_ADMIN )
 revive:addParam{ type=ULib.cmds.PlayersArg }
-revive:help( "Revives target(s)" )
+revive:help( "Revives target(s)." )

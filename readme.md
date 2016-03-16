@@ -18,5 +18,5 @@ The commands added by this plugin are as follows:
 |------------------------------|------------------------------|---------------------------|
 | `ulx makeprisoner <player>`  | `!makeprisoner`              | Makes target a prisoner.  |
 | `ulx makeguard <player>`     | `!makeguard`                 | Makes target a guard.     |
-| `ulx makespectator <player>` | `!makespectator` `!makespec` | Makes target a spectator. |
-| `ulx revive <player(s)>`     | `!revive`                    | Revives target(s)         |
+| `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator. |
+| `ulx revive <player(s)>`     | `!revive`                    | Revives target(s).        |
