@@ -14,9 +14,9 @@ To install this addon, copy the repository's `ulx4jb7/` folder into your `garrys
 ## Usage
 The commands added by this plugin are as follows:
 
-| Command                      | Chat Command(s)              | Description               |
-|------------------------------|------------------------------|---------------------------|
-| `ulx makeprisoner <player>`  | `!makeprisoner`              | Makes target a prisoner.  |
-| `ulx makeguard <player>`     | `!makeguard`                 | Makes target a guard.     |
+| Command                      | Chat Command(s)                   | Description               |
+|------------------------------|-----------------------------------|---------------------------|
+| `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.  |
+| `ulx makeguard <player>`     | `!makeguard`                      | Makes target a guard.     |
 | `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator. |
-| `ulx revive <player(s)>`     | `!revive`                    | Revives target(s).        |
+| `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).        |
