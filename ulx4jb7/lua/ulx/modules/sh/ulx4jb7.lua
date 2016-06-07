@@ -16,7 +16,7 @@ makeprisoner:addParam{ type=ULib.cmds.PlayerArg }
 makeprisoner:help( "Makes target a prisoner." )
 
 function ulx.makeguard( calling_ply, target_ply )
-	if GAMEMODE_NAME == "jailbreak" then	
+	if GAMEMODE_NAME == "jailbreak" then
 		target_ply:SetTeam(TEAM_GUARD);
 		target_ply:KillSilent();
 		target_ply:SendNotification("Forced to guards");
@@ -31,7 +31,7 @@ makeguard:addParam{ type=ULib.cmds.PlayerArg }
 makeguard:help( "Makes target a guard." )
 
 function ulx.makespectator( calling_ply, target_ply )
-	if GAMEMODE_NAME == "jailbreak" then	
+	if GAMEMODE_NAME == "jailbreak" then
 		target_ply:SetTeam(TEAM_SPECTATOR);
 		target_ply:KillSilent();
 		target_ply:SendNotification("Forced to spectators");
@@ -47,7 +47,9 @@ makespectator:help( "Makes target a spectator." )
 
 function ulx.revive( calling_ply, target_plys )
 	for k,v in pairs( target_plys ) do
-		v._jb_forceRespawn=true
+		if GAMEMODE_NAME == "jailbreak" then
+			v._jb_forceRespawn=true
+		end
 		v:Spawn()
 	end
 	ulx.fancyLogAdmin( calling_ply, "#A revived #T",  target_plys )
