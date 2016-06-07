@@ -16,12 +16,10 @@ The commands added by this plugin are as follows:
 
 | Command                      | Chat Command(s)                   | Description                |
 |------------------------------|-----------------------------------|----------------------------|
-| `ulx guardban <player>`      | `!guardban`                       | Bans target from guards.   |
+| `ulx guardban <player>`      | `!guardban`                       | Bans target from guards.*  |
 | `ulx unguardban <player>`    | `!unguardban` <br> `!guardunban`  | Unbans target from guards. |
 | `ulx makeguard <player>`     | `!makeguard`                      | Makes target a guard.      |
 | `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.   |
 | `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator.  |
 | `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).         |
-
-## Notices
-:exclamation: Guardbanning is a work in progress and is currently removed on player leave.
+\* Until disconnect
