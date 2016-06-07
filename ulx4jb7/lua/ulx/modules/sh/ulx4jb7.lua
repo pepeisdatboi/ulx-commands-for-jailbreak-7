@@ -67,7 +67,7 @@ function ulx.makespectator( calling_ply, target_ply )
 		target_ply:SendNotification("Forced to spectators");
 		ulx.fancyLogAdmin( calling_ply, "#A made #T a spectator",  target_ply );
 	else
-		ULib.tsayError(calling_ply, "error_not_jailbreak", true);
+		ULib.tsayError(calling_ply, error_not_jailbreak, true);
 	end
 end
 local makespectator = ulx.command("Jailbreak", "ulx makespectator", ulx.makespectator, {"!makespectator", "!makespec"} )
