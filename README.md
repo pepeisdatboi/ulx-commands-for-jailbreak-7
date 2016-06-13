@@ -1,4 +1,4 @@
-# ULX commands for Jailbreak 7
+# ULX Commands For Jailbreak 7
 Garry's Mod Addon that adds [ULX](https://github.com/TeamUlysses/ulx) commands for [Excl's Jailbreak 7](https://github.com/kurt-stolle/jailbreak)
 
 ## Requirements
