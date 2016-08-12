@@ -9,7 +9,7 @@ ULX commands for Jailbreak 7 requires the following addons:
 * [Jailbreak 7](https://github.com/kurt-stolle/jailbreak)
 
 ## Installation
-To install this addon, copy the repository's `ulx4jb7/` folder into your `garrysmod/addons/` folder.
+To install this addon, sextract the files from the downloaded archive to your `garrysmod/addons/` folder.
 
 ## Usage
 The commands added by this plugin are as follows:
