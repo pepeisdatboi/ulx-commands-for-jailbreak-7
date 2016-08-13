@@ -22,6 +22,8 @@ The commands added by this plugin are as follows:
 | `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.   |
 | `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator.  |
 | `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).         |
+| `ulx toggleff`               | `!toggleff`                       | Toggles friendly fire.     |
+| `ulx togglepickup`           | `!togglepickup`                   | Toggles item pickup.       |
 
 ## License
 	ULX Commands for Jailbreak 7
