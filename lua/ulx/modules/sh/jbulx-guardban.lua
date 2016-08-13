@@ -1,14 +1,12 @@
 function ulx.guardban( calling_ply, target_ply, unban )
 	if GAMEMODE_NAME == "jailbreak" then
 		if unban then
-			if target_ply._ulx4jb7_guardbanned then
-				target_ply._ulx4jb7_guardbanned=false
+			if target_ply:GetPData( "guardbanned", false ) then
+				target_ply:RemovePData( "guardbanned" )
 				ulx.fancyLogAdmin( calling_ply, "#A unbanned #T from guards",  target_ply );
-			else
-				return
 			end
 		else
-			target_ply._ulx4jb7_guardbanned=true
+			target_ply:SetPData( "guardbanned", 1 )
 			ulx.fancyLogAdmin( calling_ply, "#A banned #T from guards",  target_ply );
 			if target_ply:Team() == TEAM_GUARD then
 				target_ply:SetTeam(TEAM_PRISONER);
@@ -28,11 +26,12 @@ guardban:setOpposite( "ulx unguardban", { _, _, true }, {"!unguardban", "!guardu
 guardban:help( "Bans target from guards." )
 
 
-hook.Add( "JailBreakPlayerSwitchTeam", "ulx4jb7_JailBreakPlayerSwitchTeam", function(player, team)
-	if player._ulx4jb7_guardbanned and team == TEAM_GUARD then
+hook.Add( "JailBreakPlayerSwitchTeam", "jbulx_JailBreakPlayerSwitchTeam", function(player, team)
+	if player:GetPData( "guardbanned", false ) and team == TEAM_GUARD then
 		player:SetTeam(TEAM_PRISONER);
 		player:KillSilent();
 		player:SendNotification("Forced to prisoners");
 		ULib.tsayError(player, "You are banned from joining guards!")
+		ulx.fancyLogAdmin( nil, true,  "#T attemped to join guards while guardbanned", player)
 	end
 end )
