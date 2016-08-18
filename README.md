@@ -14,16 +14,17 @@ To install this addon, extract the files from the downloaded archive to your `ga
 ## Usage
 The commands added by this plugin are as follows:
 
-| Command                      | Chat Command(s)                   | Description                |
-|------------------------------|-----------------------------------|----------------------------|
-| `ulx guardban <player>`      | `!guardban`                       | Bans target from guards.   |
-| `ulx unguardban <player>`    | `!unguardban` <br> `!guardunban`  | Unbans target from guards. |
-| `ulx makeguard <player>`     | `!makeguard`                      | Makes target a guard.      |
-| `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.   |
-| `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator.  |
-| `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).         |
-| `ulx toggleff`               | `!toggleff`                       | Toggles friendly fire.     |
-| `ulx togglepickup`           | `!togglepickup`                   | Toggles item pickup.       |
+| Command                      | Chat Command(s)                   | Description                          |
+|------------------------------|-----------------------------------|--------------------------------------|
+| `ulx guardban <player>`      | `!guardban`                       | Bans target from guards temporarily. |
+| `ulx unguardban <player>`    | `!unguardban` <br> `!guardunban`  | Unbans target from guards.           |
+| `ulx guardbaninfo <player>`  | `!guardbaninfo` <br> `!gbinfo`    | Prints info about a guardban.        |
+| `ulx makeguard <player>`     | `!makeguard`                      | Makes target a guard.                |
+| `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.             |
+| `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator.            |
+| `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).                   |
+| `ulx toggleff`               | `!toggleff`                       | Toggles friendly fire.               |
+| `ulx togglepickup`           | `!togglepickup`                   | Toggles item pickup.                 |
 
 ## License
 	ULX Commands for Jailbreak 7
