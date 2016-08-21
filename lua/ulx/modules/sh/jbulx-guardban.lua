@@ -1,3 +1,6 @@
+local error_not_jailbreak = "The current gamemode is not jailbreak!"
+
+
 function ulx.guardban( calling_ply, target_ply, unban )
 	if GAMEMODE_NAME == "jailbreak" then
 		if unban then
@@ -6,6 +9,8 @@ function ulx.guardban( calling_ply, target_ply, unban )
 				target_ply:RemovePData( "guardbanned_on" )
 				target_ply:RemovePData( "guardbanned_by" )
 				ulx.fancyLogAdmin( calling_ply, "#A unbanned #T from guards",  target_ply );
+			else
+				ULib.tsayError(calling_ply, "That player is not guardbanned!", true);
 			end
 		else
 			target_ply:SetPData( "guardbanned", os.time()+57600 )
@@ -19,7 +24,7 @@ function ulx.guardban( calling_ply, target_ply, unban )
 			end
 		end
 	else
-		ULib.tsayError(calling_ply, "The current gamemode is not jailbreak!", true);
+		ULib.tsayError(calling_ply, error_not_jailbreak, true);
 	end
 end
 local guardban = ulx.command("Jailbreak", "ulx guardban", ulx.guardban, "!guardban" )
@@ -39,7 +44,7 @@ function ulx.guardbaninfo( calling_ply, target_ply)
 			ULib.tsayError(calling_ply, target_ply:Name() .. " is not guardbanned!")
 		end
 	else
-		ULib.tsayError(calling_ply, "The current gamemode is not jailbreak!", true);
+		ULib.tsayError(calling_ply, error_not_jailbreak, true);
 	end
 end
 local guardbaninfo = ulx.command("Jailbreak", "ulx guardbaninfo", ulx.guardbaninfo, {"!guardbaninfo", "!gbinfo"}, true )

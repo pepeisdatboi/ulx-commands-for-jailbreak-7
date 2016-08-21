@@ -40,3 +40,19 @@ end
 local togglepickup = ulx.command("Jailbreak", "ulx togglepickup", ulx.togglepickup, "!togglepickup")
 togglepickup:defaultAccess( ULib.ACCESS_ADMIN )
 togglepickup:help( "Toggles item pickup." )
+
+function ulx.demotewarden( calling_ply )
+	if GAMEMODE_NAME == "jailbreak" then
+		if IsValid(JB.TRANSMITTER:GetJBWarden()) then
+			ulx.fancyLogAdmin( calling_ply, "#A removed the warden status from #T", JB.TRANSMITTER:GetJBWarden())
+			JB.TRANSMITTER:GetJBWarden():RemoveWardenStatus();
+		else
+			ULib.tsayError(calling_ply, "There is no warden to demote!", true);
+		end
+	else
+		ULib.tsayError(calling_ply, error_not_jailbreak, true);
+	end
+end
+local demotewarden = ulx.command("Jailbreak", "ulx demotewarden", ulx.demotewarden, "!demotewarden")
+demotewarden:defaultAccess( ULib.ACCESS_ADMIN )
+demotewarden:help( "Remove the warden status from the current warden." )
