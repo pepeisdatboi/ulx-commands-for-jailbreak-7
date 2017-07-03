@@ -4,7 +4,7 @@
 	"version"			"1"
 	"up_date"			"00/00/00"
 	"author_name"		"Ian Murray"
-	"author_email"		"ian@ceteri.org"
+	"author_email"		"ian@murr.pro"
 	"author_url"		"https://github.com/IanMurray"
 	"info"				"ULX commands for Jailbreak 7"
 	"override"			"0"
