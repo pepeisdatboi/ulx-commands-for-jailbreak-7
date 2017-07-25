@@ -45,3 +45,40 @@ local makespectator = ulx.command("Jailbreak", "ulx makespectator", ulx.makespec
 makespectator:defaultAccess( ULib.ACCESS_ADMIN )
 makespectator:addParam{ type=ULib.cmds.PlayerArg }
 makespectator:help( "Makes target a spectator." )
+
+
+function ulx.makewarden( calling_ply, target_plys )
+	local affected_plys = {}
+
+	for i=1, #target_plys do
+		local v = target_plys[ i ]
+
+		if ulx.getExclusive( v, calling_ply ) then
+			ULib.tsayError( calling_ply, ulx.getExclusive( v, calling_ply ), true )
+		elseif not v:Alive() then
+			ULib.tsayError( calling_ply, v:Nick() .. " is dead", true )
+		elseif v:IsFrozen() then
+			ULib.tsayError( calling_ply, v:Nick() .. " is frozen", true )
+		else
+
+		local warden=JB.TRANSMITTER:GetJBWarden()
+		if IsValid(warden) then
+		warden:RemoveWardenStatus();
+		table.insert( affected_plys, warden )
+		end
+		if !v:Alive() or v:Team() ~= 2 then 
+			v:SetTeam(TEAM_GUARD)
+			v._jb_forceRespawn=true
+			v:Spawn();
+		end
+		v:AddWardenStatus();
+		table.insert( affected_plys, v )
+	end
+end
+
+ulx.fancyLogAdmin( calling_ply, "#A forced warden #T", affected_plys )
+end
+local makewarden = ulx.command( "Jailbreak", "ulx makewarden", ulx.makewarden, {"!makewarden", "!warden"} )
+makewarden:addParam{ type=ULib.cmds.PlayersArg }
+makewarden:defaultAccess( ULib.ACCESS_ADMIN )
+makewarden:help( "Makes the target the warden." )
