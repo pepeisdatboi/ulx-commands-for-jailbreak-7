@@ -19,7 +19,7 @@ function ulx.showdeath(calling_ply,target_ply)
 	end
 	ulx.fancyLogAdmin(calling_ply, "#A has teleported to #T's death position", target_ply)
 end
-local showdeath = ulx.command(category, "ulx showdeath", ulx.showdeath, "!showdeath")
+local showdeath = ulx.command( "Jailbreak", "ulx showdeath", ulx.showdeath, "!showdeath")
 showdeath:addParam{type=ULib.cmds.PlayerArg}
 showdeath:defaultAccess(ULib.ACCESS_ADMIN)
 showdeath:help("Teleports you to the position where the target died")
