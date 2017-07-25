@@ -82,3 +82,27 @@ local makewarden = ulx.command( "Jailbreak", "ulx makewarden", ulx.makewarden, {
 makewarden:addParam{ type=ULib.cmds.PlayersArg }
 makewarden:defaultAccess( ULib.ACCESS_ADMIN )
 makewarden:help( "Makes the target the warden." )
+
+
+
+local warden = nil
+hook.Add("JailBreakClaimWarden", "teleportguardswarden", function(ply)
+	warden = ply
+end)
+hook.Add("JailBreakRoundEnd", "teleportguardsforgetwarden", function()
+	warden = nil
+end)
+
+function ulx.teleportguards(calling_ply)
+	if (warden == nil) or (warden:Team() ~= TEAM_GUARD) or (!warden:IsPlayer()) then
+		calling_ply:ChatPrint("There is no warden!")
+	end
+	for k,v in pairs(team.GetPlayers(TEAM_GUARD)) do
+		v:SetPos(warden:GetPos())
+	end
+	ulx.fancyLogAdmin(calling_ply, "#A has teleported all guards to the warden")
+end
+local teleguards = ulx.command(category, "ulx teleportguards", ulx.teleportguards, {"!tpg", "!teleportguards"} )
+teleguards:defaultAccess(ULib.ACCESS_ADMIN)
+teleguards:help("This teleports all of the guards to the warden!")
+
