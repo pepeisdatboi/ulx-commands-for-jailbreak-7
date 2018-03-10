@@ -14,26 +14,30 @@ To install this addon, extract the files from the downloaded archive to your `ga
 ## Usage
 The commands added by this plugin are as follows:
 
-| Command                      | Chat Command(s)                   | Description                                       |
-|------------------------------|-----------------------------------|---------------------------------------------------|
-| `ulx demotewarden`           | `!demotewarden`                   | Remove the warden status from the current warden. |
-| `ulx guardban <player>`      | `!guardban`                       | Bans target from guards temporarily.              |
-| `ulx unguardban <player>`    | `!unguardban` <br> `!guardunban`  | Unbans target from guards.                        |
-| `ulx guardbaninfo <player>`  | `!guardbaninfo` <br> `!gbinfo`    | Prints info about a guardban.                     |
-| `ulx makeguard <player>`     | `!makeguard`                      | Makes target a guard.                             |
-| `ulx makeprisoner <player>`  | `!makeprisoner`                   | Makes target a prisoner.                          |
-| `ulx makespectator <player>` | `!makespectator` <br> `!makespec` | Makes target a spectator.                         |
-| `ulx revive <player(s)>`     | `!revive`                         | Revives target(s).                                |
-| `ulx toggleff`               | `!toggleff`                       | Toggles friendly fire.                            |
-| `ulx togglepickup`           | `!togglepickup`                   | Toggles item pickup.                              |
-| `ulx showdeath <player>`     | `!showdeath`                      | Teleports to the position where the target died.  |
-| `ulx teleportguards`         | `!teleportguards` <br> `!tpg`     | Teleports all guards to the warden.               |
-| `ulx opencells`              | `!opencells` <br> `!open`         | Opens cell doors.                                 |
+| Command                           | Chat Command(s)                   | Description                                       |
+|-----------------------------------|-----------------------------------|---------------------------------------------------|
+| `ulx demotewarden`                | `!demotewarden`                   | Remove the warden status from the current warden. |
+| `ulx guardban <player>`           | `!guardban`                       | Bans target from guards temporarily.              |
+| `ulx unguardban <player>`         | `!unguardban` <br> `!guardunban`  | Unbans target from guards.                        |
+| `ulx guardbaninfo <player>`       | `!guardbaninfo` <br> `!gbinfo`    | Prints info about a guardban.                     |
+| `ulx makeguard <player>`          | `!makeguard`                      | Makes target a guard.                             |
+| `ulx makeprisoner <player>`       | `!makeprisoner`                   | Makes target a prisoner.                          |
+| `ulx makespectator <player>`      | `!makespectator` <br> `!makespec` | Makes target a spectator.                         |
+| `ulx revive <player(s)>`          | `!revive`                         | Revives target(s).                                |
+| `ulx respawn <player(s)>`         | `!respawn`                        | Respawns target(s).                               |
+| `ulx toggleff`                    | `!toggleff`                       | Toggles friendly fire.                            |
+| `ulx togglepickup`                | `!togglepickup`                   | Toggles item pickup.                              |
+| `ulx showdeath <player>`          | `!showdeath`                      | Teleports to the position where the target died.  |
+| `ulx teleportguards`              | `!teleportguards` <br> `!tpg`     | Teleports all guards to the warden.               |
+| `ulx opencells`                   | `!opencells` <br> `!open`         | Opens cell doors.                                 |
+| `ulx slaynr <player(s)> [rounds]` | `!slaynr`                         | Slays target(s) for a given number of rounds.     |
+| `ulx rslaynr <player(s)> [rounds]`| `!rslaynr`                        | Removes a given number of slays from target(s).   |
+| `ulx cslaynr <player>`            | `!cslaynr`                        | Check a target's remaining slays.                 |
 
 
 ## License
 	ULX Commands for Jailbreak 7
-	Copyright (C) 2016  Ian Murray
+	Copyright (C) 2016-2018  Ian Murray
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
